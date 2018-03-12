@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+      <h2>Here is the Solution: </h2>
+      <label> User Name:</label>
+      <input type="text" class="form-control" [(ngModel)]='userInput' (click)= "onUserInput()"> <!-- (click)="userInput = ''" -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <br>
+      <strong> <p *ngIf ="updateUser"> {{ userInput }} </p> </strong>
+    </div>
+    <div class="col-md-8">
+      <br>
+      <button class="btn btn-primary" [disabled]="userInput === ''" (click)= "onUserInput()"> <!-- (click)="userInput = ''" -->
+        Reset User </button>
+
+    </div>
+  </div>
+</div>
